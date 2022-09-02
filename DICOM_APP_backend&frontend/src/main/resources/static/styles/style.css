@@ -1,0 +1,120 @@
+.bg-image {
+    background-image: url("https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg");
+    background-color: #cccccc;
+    /*background-color: darkseagreen;*/
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: antiquewhite;
+}
+
+p{
+    font-family: Georgia, serif;
+    font-weight: bolder;
+    text-align: left;
+    color: antiquewhite;
+}
+h1{
+    font-family: Georgia, serif;
+    font-weight: bolder;
+    text-align: left;
+    color: antiquewhite;
+}
+
+.button{
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 40px;
+    transition-duration: 0.4s;
+    font-family: Georgia, serif;
+    font-size: 12px;
+}
+
+.button:hover {
+    background-color: darkgray;
+    color: white;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.header img{
+    font-family: Georgia, serif;
+    width: 280px;
+    height: 100px;
+}
+
+label {
+    padding: 1.9em;
+    /*height: 100px;*/
+    background-color: hsla(0, 100%, 90%, 0.3);
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+    font-family: Georgia, serif;
+}
+.image{
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+
+}
+
+/*input[type="file"] {*/
+/*    position: absolute;*/
+/*    width: 1px;*/
+/*    height: 1px;*/
+/*    padding: 0;*/
+/*    margin: -1px;*/
+/*    !*overflow: hidden;*!*/
+/*    clip: rect(0,0,0,0);*/
+/*    border: 0;*/
+/*}*/
+
+/*.custom-file-upload {*/
+/*    !*border: 1px solid #ccc;*!*/
+/*    display: inline-block;*/
+/*    padding: 6px 12px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+.input div{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: antiquewhite;
+
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    border-inline: 1px solid #ddd;
+    font-family: Georgia, serif;
+    font-weight: bolder;
+}
+
+/*tr:hover {background-color: darkseagreen;}*/
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+th {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.tumor{
+    background-color: rgba(139,0,0,0.8);
+
+    /*background: repeating-radial-gradient(to right, #8B0000 , #ffeeec);*/
+    /*background-color: hotpink;*/
+}
+.normal{
+    background-color: whitesmoke;
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>DICOM APP</title>
+    <link href="../static/styles/style.css" th:href="@{/styles/style.css}" rel="stylesheet"/>
+
+</head>
+
+
+<body>
+<div>
+    <div class="bg-image header">
+        <img class="header" src="https://edm.bnext.com.tw/2021cathaycon/img/logo-cathay@2x.png">
+        <div>
+            <p><i>FinTech Medical Group</i></p>
+            <h1><strong>Tumor-Detected System of Lung</strong></h1>
+        </div>
+        <form th:action="@{/uploadImage}" method="post" enctype="multipart/form-data">
+            <label for="file-upload" class="custom-file-upload">
+                <input id="files" name="files" placeholder="upload " th:multiple="multiple" type="file">
+                <button class="button" type="submit">Upload</button>
+            </label>
+        </form>
+    </div>
+
+    <div class="image">
+        <table class="table">
+            <thead>
+            <tr>
+                <td>File Name</td>
+                <td>Before</td>
+                <td>After</td>
+                <td>Tumor Size</td>
+                <td>Tumor Existence</td>
+            </tr>
+            </thead>
+            <tbody>
+<!--            -->
+            <tr th:each="response : ${responseList}" th:styleappend="${response.getTumorSize() > 0 } ? 'background-color: rgba(139,0,0,0.8)' : 'background-color: whitesmoke'">
+                <td th:text="${response.getFileName()}"></td>
+                <td><img th:src="@{'data:image/jpeg;charset=utf-8;base64,'+${response.getInput()}}"></td>
+                <td><img th:src="@{'data:image/jpeg;charset=utf-8;base64,'+${response.getOutput()}}"></td>
+                <td th:text="${response.getTumorSize()}"></td>
+                <td th:text="${response.getTumorExistence()}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</body>
+
+</html>
