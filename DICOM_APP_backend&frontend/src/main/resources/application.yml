@@ -6,6 +6,15 @@ spring:
     multipart:
       max-file-size: 300MB
       max-request-size: 500MB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${USERNAME}
+    password: ${PASSWORD}
+    url: jdbc:mysql://localhost:3306/orthanc
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.MySQL8Dialect
 
 outbound-service:
   dicom-transform:
