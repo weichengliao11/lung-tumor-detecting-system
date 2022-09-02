@@ -1,16 +1,22 @@
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: soccer11TW
-    url: jdbc:mysql://localhost:3306/orthanc
-  jpa:
-    hibernate:
-      ddl-auto: none
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+  servlet:
+    multipart:
+      max-file-size: 300MB
+      max-request-size: 500MB
 
-#server:
-#  servlet:
-#    context-path: /demo
+outbound-service:
+  dicom-transform:
+    name: dicom-transform
+    url: http://localhost:8042
+  dicom-server:
+    name: dicom-server
+    url: http://localhost:8042
+  flask-server:
+    name: flask-server
+    url: http://localhost:8080
 
-
+server:
+  port: 8090
